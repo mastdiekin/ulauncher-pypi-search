@@ -8,10 +8,10 @@ from ulauncher.api.shared.action.RenderResultListAction import RenderResultListA
 from ulauncher.api.shared.action.OpenUrlAction import OpenUrlAction
 
 
-class NpmjsExtension(Extension):
+class PyPi(Extension):
 
     def __init__(self):
-        super(NpmjsExtension, self).__init__()
+        super(PyPi, self).__init__()
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
 
 
@@ -67,4 +67,4 @@ class KeywordQueryEventListener(EventListener):
 
 
 if __name__ == '__main__':
-    NpmjsExtension().run()
+    PyPi().run()
