@@ -55,9 +55,11 @@ class KeywordQueryEventListener(EventListener):
 
         items = []
         for result in results:
+            description = "%s - %s" % (result['version'],
+                                       result['description'])
             items.append(ExtensionResultItem(icon='images/white-cube.png',
                                              name=result['name'],
-                                             description=result['description'],
+                                             description=description,
                                              on_enter=OpenUrlAction(
                                                  result['url'])
                                              )
